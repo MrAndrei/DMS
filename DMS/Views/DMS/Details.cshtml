@@ -1,0 +1,70 @@
+﻿@model DMS.Models.Device
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Device</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.manufacturer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.manufacturer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.os)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.os)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.os_version)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.os_version)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.cpu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cpu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ram)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ram)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id, name=Model.name, manufacturer=Model.manufacturer, type = Model.type,
+                                    os=Model.os, os_version=Model.os_version, cpu=Model.cpu, ram=Model.ram
+                                })
+    <span>&#124;</span>
+    <a asp-action="Home">Back to List</a>
+</div>

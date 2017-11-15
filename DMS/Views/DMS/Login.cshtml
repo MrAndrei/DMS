@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Login Page</h2>
+
+<div class="row" style="margin: auto; padding: 40px; max-width: 800px;">
+    <form asp-action="Login" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-4">
+                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-4">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+            </div>
+        </div>
+        <div class="form-group">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-default" value="Log In" onclick=DisableSignOut()>
+                </div>
+        </div>
+    </form>
+</div>

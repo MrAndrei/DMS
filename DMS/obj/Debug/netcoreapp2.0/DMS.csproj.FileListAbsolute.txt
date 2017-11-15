@@ -1,0 +1,22 @@
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.deps.json
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.runtimeconfig.json
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.runtimeconfig.dev.json
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.dll
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.pdb
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.csprojResolveAssemblyReference.cache
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.csproj.CoreCompileInputs.cache
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.AssemblyInfoInputs.cache
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.AssemblyInfo.cs
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.dll
+C:\Users\FlorinAndrei\source\repos\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.pdb
+D:\Workspace Visual Studio\C#\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.csprojResolveAssemblyReference.cache
+D:\Workspace Visual Studio\C#\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.csproj.CoreCompileInputs.cache
+D:\Workspace Visual Studio\C#\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.AssemblyInfoInputs.cache
+D:\Workspace Visual Studio\C#\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.AssemblyInfo.cs
+D:\Workspace Visual Studio\C#\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.dll
+D:\Workspace Visual Studio\C#\DMS\DMS\obj\Debug\netcoreapp2.0\DMS.pdb
+D:\Workspace Visual Studio\C#\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.deps.json
+D:\Workspace Visual Studio\C#\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.runtimeconfig.json
+D:\Workspace Visual Studio\C#\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.runtimeconfig.dev.json
+D:\Workspace Visual Studio\C#\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.dll
+D:\Workspace Visual Studio\C#\DMS\DMS\bin\Debug\netcoreapp2.0\DMS.pdb
