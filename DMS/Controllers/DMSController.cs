@@ -266,7 +266,7 @@ namespace DMS.Controllers
         */
 
         [ActionName("Delete")]
-        public void DeleteDevice(int id)
+        public ActionResult DeleteDevice(int id)
         {
             if (Request.Cookies.ContainsKey("user_logged_in"))
             {
@@ -277,10 +277,15 @@ namespace DMS.Controllers
                 {
                     con.Close();
                     Response.Redirect("http://localhost:61759/dms/Home");
+                    return View("Index", deviceList);
+                    
                 }
+                else
+                    return Content("This id does not exist or was already deleted");
             }
             else
-                Response.Redirect("http://localhost:61759/");
+                //Response.Redirect("http://localhost:61759/");
+                return View("NotLogged");
         }
 
         /*

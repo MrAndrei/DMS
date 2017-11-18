@@ -13228,11 +13228,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Workspace Visual Studio\\C#\\DMS\\DMS\\DMS.csproj",
+      "projectUniqueName": "D:\\WORKSPACE\\C#\\DMS\\DMS\\DMS.csproj",
       "projectName": "DMS",
-      "projectPath": "D:\\Workspace Visual Studio\\C#\\DMS\\DMS\\DMS.csproj",
+      "projectPath": "D:\\WORKSPACE\\C#\\DMS\\DMS\\DMS.csproj",
       "packagesPath": "C:\\Users\\FlorinAndrei\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace Visual Studio\\C#\\DMS\\DMS\\obj\\",
+      "outputPath": "D:\\WORKSPACE\\C#\\DMS\\DMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13272,7 +13272,7 @@
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
