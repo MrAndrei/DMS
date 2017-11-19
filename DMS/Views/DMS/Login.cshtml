@@ -2,6 +2,8 @@
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+
 }
 
 
@@ -26,5 +28,12 @@
                     <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-default" value="Log In" onclick=DisableSignOut()>
                 </div>
         </div>
-    </form>
+        <div class="form-group">
+            <a href="http://localhost:61759/dms/RegisterPage" class="col-sm-4  col-sm-offset-2">No account? Register here</a>
+        </div>
+
+        <strong>@TempData["result"]</strong>
+
+
+</form>
 </div>

@@ -27,6 +27,7 @@ namespace DMS.Controllers
          * the user will be redirected to the home page. Else, he will be redirected to the login page.
          */
         public IActionResult LoginPage() {
+            deviceList.Clear();
             if (Request.Cookies.ContainsKey("user_logged_in"))
             {
                 LoadDevices(deviceList);
@@ -34,8 +35,23 @@ namespace DMS.Controllers
             }
             else
                 return View("Login");
-        } 
+        }
 
+        /*
+         * This method returns the register page when a visitor wants to make a new account 
+         */
+        public IActionResult RegisterPage() {
+            deviceList.Clear();
+            if (Request.Cookies.ContainsKey("user_logged_in"))
+            {
+                LoadDevices(deviceList);
+                return View("Index", deviceList);
+            }
+            else
+                return View("Register");
+        }
+
+   
 
         /*
          *  This is the method which will be triggered when the user submits the login form. A check to the database is made 
@@ -74,6 +90,60 @@ namespace DMS.Controllers
                 return View("404");
             }
         }
+
+        /*
+         *  This method is fired when the user wants to make a new account. It first checks if the name is not registered,
+         *  then hashes the password and send the insert command to the database. The login page is then shown with a confirmation
+         *  message that the account was created. 
+         */
+        [HttpPost]
+        public ActionResult Register(string name, string role, string location, string username, string password)
+        {
+            bool user_exists = CheckUser(username);
+
+            if (user_exists == false)
+            {
+
+                string hashed_password = Hash.HashPassword(password);
+                if (con.State == System.Data.ConnectionState.Closed)
+                    con.Open();
+
+                cmd = new SqlCommand($"insert into Users values('{name}','{role}','{location}','{username}','{hashed_password}')", con);
+                if (cmd.ExecuteNonQuery() != 0)
+                {
+                    con.Close();
+                    TempData["result"] = "Account Created Successfully!";
+                    return View("Login");
+                }
+
+            }
+
+            return View("404");
+
+
+        }
+
+        /*
+         *  This method checks if the username already exists in the database
+         */
+
+        [HttpPost]
+        public bool CheckUser(string username) {
+            if (con.State == System.Data.ConnectionState.Closed)
+                con.Open();
+            cmd = new SqlCommand($"select id from Users where username='{username}' ",con);
+
+            var uid = cmd.ExecuteScalar();
+
+            if (uid != null)
+                return true;
+            else
+                return false;
+        }
+
+
+
+
 
         [NonAction]
         public void SetUserName(string username) {
@@ -149,7 +219,9 @@ namespace DMS.Controllers
             return View("NotLogged");
         }
 
-        
+        /*
+         *  This method is used to load all the devices in a list of objects.
+         */
 
         [NonAction]
         public void LoadDevices(List<Object[]> devices) {

@@ -1,0 +1,17 @@
+username: florinandrei
+password: pass7459
+
+username: bob99
+password: ihaveapassword!@glm
+
+username: rick
+password: mynameisrick57
+
+username: alinamuntean
+password: alinahr17
+
+username: johndoe
+password: doejon80
+
+username: mariastanculescu
+password: mst!@201

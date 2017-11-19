@@ -1,18 +1,12 @@
-﻿// Write your JavaScript code.
-
-/*
-    function which hides the sign out button if the user is not logged in
+﻿/*
+ *  Function which hides the sign out button if the user is not logged in
+ *  
 */
 $(document).ready(function () {
 
     if (document.cookie.indexOf('user_logged_in') < 0)
         $('#SignOut').css("visibility", "hidden");
 
-    /*if (document.cookie.indexOf('user_logged_in') >= 0) {
-        var now = new Date();
-        now.setTime(now.getTime() + 1 * 60 * 1000);
-        document.cookie = "user_logged_in=NOK; expires=" + now.toUTCString() + "; path=/";
-    }*/
 });
 
 /* 
@@ -38,3 +32,46 @@ function FilterResults() {
     }
 
 }
+
+/*
+ *  This method makes checks does a live check of the username from the input via an ajax call. 
+ */
+
+function CheckUserAvailability() {
+
+    var username = $("#username").val();
+
+    jQuery.ajax({
+
+        url: '/dms/CheckUser?username='+username,
+
+        type: "POST",
+
+        dataType: "json",
+
+        data: "{}",
+
+        contentType: "application/json; charset=utf-8",
+
+        success: function (data) {
+
+            if (data == true)
+                $("#userTaken").show(0, RegBtnDisabled);
+            else
+                $("#userTaken").hide(0, RegBtnEnabled);
+
+        }
+
+    });
+}
+
+function RegBtnDisabled() {
+    $("#RegisterButton").prop("disabled", true);
+}
+
+function RegBtnEnabled() {
+    $("#RegisterButton").prop("disabled", false);
+}
+
+
+
